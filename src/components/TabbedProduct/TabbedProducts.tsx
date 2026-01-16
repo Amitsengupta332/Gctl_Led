@@ -40,17 +40,16 @@ export default function TabbedProducts() {
   const [activeTab, setActiveTab] = useState("Description");
 
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
-
+    <section className="py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
-          <h2 className="text-2xl font-semibold mb-4 md:mb-0">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 md:mb-12">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-0 text-center md:text-left">
             Your Best LED Products Starts Here
           </h2>
 
           {/* Tabs */}
-          <div className="flex gap-8 text-sm font-medium">
+          <div className="flex justify-center md:justify-end gap-6 text-sm font-medium">
             {TABS.map((tab) => (
               <button
                 key={tab}
@@ -67,11 +66,13 @@ export default function TabbedProducts() {
           </div>
         </div>
 
-        {/* Product Grid (same for all tabs) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {products.map((product) => (
-            <div key={product.id} className="text-center">
-              
+            <div
+              key={product.id}
+              className="text-center max-w-sm mx-auto sm:max-w-none"
+            >
               {/* Image */}
               <div className="relative w-full h-64 mb-4">
                 <Image
@@ -107,7 +108,6 @@ export default function TabbedProducts() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

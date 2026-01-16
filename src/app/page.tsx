@@ -1,3 +1,4 @@
+import BlogSection from "@/components/Blog/BlogSection";
 import CategorySection from "@/components/CategorySection/CategorySection";
 import Hero from "@/components/HeroSection/Hero";
 import PromoSlider from "@/components/PromoSlider/PromoSlider";
@@ -10,7 +11,8 @@ export default function Home() {
       <Hero />
       <CategorySection />
       <PromoSlider />
-      <TabbedProducts/>
+      <TabbedProducts />
+      <BlogSection />
     </div>
   );
 }
