@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import {
   FaFacebookF,
@@ -74,10 +75,10 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <a className="hover:text-blue-700">Solutions</a>
-              <a className="hover:text-blue-700">Support</a>
-              <a className="hover:text-blue-700">Blog</a>
-              <a className="hover:text-blue-700">Contact Us</a>
+              <Link href="/solutions" className="hover:text-blue-700">Solutions</Link>
+              <Link href="/support" className="hover:text-blue-700">Support</Link>
+              <Link href="/blog" className="hover:text-blue-700">Blog</Link>
+              <Link href="/contact" className="hover:text-blue-700">Contact Us</Link>
             </nav>
 
             {/* ===== Desktop Icons ===== */}
